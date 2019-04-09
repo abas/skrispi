@@ -20,7 +20,7 @@ Penelitian berikutnya dengan judul “Continuous Deployment of Software Intensiv
 
 Berikut merupakan landasan teori yang digunakan di penilitian ini, sumber dari landasan teori berikut berupa literatur jurnal, buku, dan juga official website.
 
-#### 2.2.1 ssh
+#### 2.2.1 SSH
 Protokol Secure Shell (SSH) adalah protokol untuk login jarak jauh yang aman dan layanan jaringan aman lainnya melalui jaringan yang tidak aman. Protokol SSH terdiri dari tiga komponen utama: Transport Layer Protocol menyediakan otentikasi server, kerahasiaan, dan integritas dengan kerahasiaan ke depan yang sempurna. Protokol Otentikasi Pengguna mengautentikasi klien ke server. Protokol Koneksi melipatgandakan terowongan terenkripsi menjadi beberapa saluran logis. Detail protokol ini dijelaskan dalam dokumen terpisah[10].
 
 Metode Secure Shell (SSH) digunakan untuk melakukan remote-login atau masuk pada suatu sistem dari jarak jauh pada jaringan yang tidak aman. Secure Shell (SSH) sendiri terbagi menjadi 3 komponen :
@@ -31,7 +31,7 @@ mengotentikasi pengguna sisi klien ke server. Ini berjalan di atas protokol laye
 - The Connection Protocol [SSH-CONNECT] 
 melipatgandakan terowongan terenkripsi menjadi beberapa saluran logis. Itu berjalan di atas protokol otentikasi pengguna.
 
-#### 2.2.2 nodejs
+#### 2.2.2 NodeJS
 NodeJS merupakan sebuah runtime JavaScript yang didorong peristiwa asinkron, Node dirancang untuk membangun aplikasi jaringan yang dapat diskalakan. Dalam contoh "hello world" berikut, banyak koneksi dapat ditangani secara bersamaan. Pada setiap koneksi callback diaktifkan, tetapi jika tidak ada pekerjaan yang harus dilakukan, Node akan tertidur (sleep mode).
 ![](../images/img/NodeJS-example.png)
 
@@ -41,7 +41,11 @@ Event-Driven dari Node.js dan event-loop secara konseptual sederhana: loop peris
 
 Ada beberapa modul atau library dasar node.js yang dapat mentranslasikan sebuah string menjadi sebuah perintah dasar console, dari library tersebut dapat lagi dikembangkan menjadi modul-modul kecil yang sangat berguna, misalkan untuk membuat perintah baru seperti memasukkan perintah console yang di ambil dari sebuah package binary dari sebuah program kecil. dari sini dapat dilakukan pemrograman secara modular dimana untuk pengembangan jangka panjang akan lebih nyaman dan mudah.
 
-#### bash script
+#### 2.2.3. BASH
+BASH adalah file teks biasa yang berisi serangkaian perintah. Perintah-perintah ini adalah campuran dari perintah yang biasanya kita ketik ouselves pada baris perintah (seperti ls atau cp misalnya) dan perintah yang bisa kita ketik pada baris perintah tetapi umumnya tidak (Anda akan menemukan ini pada beberapa halaman berikutnya ). BASH berjalan pada Unix shell, interpreter baris perintah atau shell yang menyediakan antarmuka pengguna baris perintah untuk sistem operasi mirip Unix. Shell adalah bahasa perintah interaktif dan bahasa scripting, dan digunakan oleh sistem operasi untuk mengontrol eksekusi sistem menggunakan skrip shell. Pengguna biasanya berinteraksi dengan shell Unix menggunakan emulator terminal; Namun, operasi langsung melalui koneksi perangkat keras serial atau Secure Shell adalah umum untuk sistem server. Semua shell Unix menyediakan wildcarding nama file, perpipaan, di sini dokumen substitusi perintah, variabel, dan struktur kontrol untuk pengujian kondisi dan iterasi.
+
+Dalam suatu kasus, perintah command line biasanya di eksekusi pada sebuah console atau terminal dari sebuah sistem operasi itu sendiri, dalam hal lain terdapat deretan atau runtutan perintah command line yang di satukan menjadi sebuah file yang bisa disebut sebagai wizard-script atau bash-script. Bash scripting biasanya digunakan sebagai file automasi dari sebuah perintah yang sering diulang untuk menghemat waktu pada penulisan command line.
+
 #### linux
 #### docker dan docker-compose
 #### ci/cd
