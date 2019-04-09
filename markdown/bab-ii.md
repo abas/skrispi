@@ -41,20 +41,20 @@ Event-Driven dari Node.js dan event-loop secara konseptual sederhana: loop peris
 
 Ada beberapa modul atau library dasar node.js yang dapat mentranslasikan sebuah string menjadi sebuah perintah dasar console, dari library tersebut dapat lagi dikembangkan menjadi modul-modul kecil yang sangat berguna, misalkan untuk membuat perintah baru seperti memasukkan perintah console yang di ambil dari sebuah package binary dari sebuah program kecil. dari sini dapat dilakukan pemrograman secara modular dimana untuk pengembangan jangka panjang akan lebih nyaman dan mudah.
 
-#### 2.2.3. BASH
+#### 2.2.3 BASH
 BASH adalah file teks biasa yang berisi serangkaian perintah. Perintah-perintah ini adalah campuran dari perintah yang biasanya kita ketik ouselves pada baris perintah (seperti ls atau cp misalnya) dan perintah yang bisa kita ketik pada baris perintah tetapi umumnya tidak (Anda akan menemukan ini pada beberapa halaman berikutnya ). BASH berjalan pada Unix shell, interpreter baris perintah atau shell yang menyediakan antarmuka pengguna baris perintah untuk sistem operasi mirip Unix. Shell adalah bahasa perintah interaktif dan bahasa scripting, dan digunakan oleh sistem operasi untuk mengontrol eksekusi sistem menggunakan skrip shell. Pengguna biasanya berinteraksi dengan shell Unix menggunakan emulator terminal; Namun, operasi langsung melalui koneksi perangkat keras serial atau Secure Shell adalah umum untuk sistem server. Semua shell Unix menyediakan wildcarding nama file, perpipaan, di sini dokumen substitusi perintah, variabel, dan struktur kontrol untuk pengujian kondisi dan iterasi.
 
 Dalam suatu kasus, perintah command line biasanya di eksekusi pada sebuah console atau terminal dari sebuah sistem operasi itu sendiri, dalam hal lain terdapat deretan atau runtutan perintah command line yang di satukan menjadi sebuah file yang bisa disebut sebagai wizard-script atau bash-script. Bash scripting biasanya digunakan sebagai file automasi dari sebuah perintah yang sering diulang untuk menghemat waktu pada penulisan command line.
 
-#### linux
-#### docker dan docker-compose
-#### ci/cd
-#### circle ci
-#### git
-#### terminal
-#### pm2
-#### telegram
-#### telegram bot api
+#### 2.2.4 linux
+#### 2.2.5 docker dan docker-compose
+#### 2.2.6 ci/cd
+#### 2.2.7 circle ci
+#### 2.2.8 git
+#### 2.2.9 terminal
+#### 2.2.10 pm2
+#### 2.2.11 telegram
+#### 2.2.12 telegram bot api
 
 ### 2.3 Deskripsi Tempat KKI
 
