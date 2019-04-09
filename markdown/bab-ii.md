@@ -21,7 +21,7 @@ Penelitian berikutnya dengan judul “Continuous Deployment of Software Intensiv
 Berikut merupakan landasan teori yang digunakan di penilitian ini, sumber dari landasan teori berikut berupa literatur jurnal, buku, dan juga official website.
 
 #### 2.2.1 ssh
-Protokol Secure Shell (SSH) adalah protokol untuk login jarak jauh yang aman dan layanan jaringan aman lainnya melalui jaringan yang tidak aman. Protokol SSH terdiri dari tiga komponen utama: Transport Layer Protocol menyediakan otentikasi server, kerahasiaan, dan integritas dengan kerahasiaan ke depan yang sempurna. Protokol Otentikasi Pengguna mengautentikasi klien ke server. Protokol Koneksi melipatgandakan terowongan terenkripsi menjadi beberapa saluran logis. Detail protokol ini dijelaskan dalam dokumen terpisah.
+Protokol Secure Shell (SSH) adalah protokol untuk login jarak jauh yang aman dan layanan jaringan aman lainnya melalui jaringan yang tidak aman. Protokol SSH terdiri dari tiga komponen utama: Transport Layer Protocol menyediakan otentikasi server, kerahasiaan, dan integritas dengan kerahasiaan ke depan yang sempurna. Protokol Otentikasi Pengguna mengautentikasi klien ke server. Protokol Koneksi melipatgandakan terowongan terenkripsi menjadi beberapa saluran logis. Detail protokol ini dijelaskan dalam dokumen terpisah[10].
 
 Metode Secure Shell (SSH) digunakan untuk melakukan remote-login atau masuk pada suatu sistem dari jarak jauh pada jaringan yang tidak aman. Secure Shell (SSH) sendiri terbagi menjadi 3 komponen :
 - Protocol Transport Layer [SSH-TRANS]
@@ -32,6 +32,15 @@ mengotentikasi pengguna sisi klien ke server. Ini berjalan di atas protokol laye
 melipatgandakan terowongan terenkripsi menjadi beberapa saluran logis. Itu berjalan di atas protokol otentikasi pengguna.
 
 #### 2.2.2 nodejs
+NodeJS merupakan sebuah runtime JavaScript yang didorong peristiwa asinkron, Node dirancang untuk membangun aplikasi jaringan yang dapat diskalakan. Dalam contoh "hello world" berikut, banyak koneksi dapat ditangani secara bersamaan. Pada setiap koneksi callback diaktifkan, tetapi jika tidak ada pekerjaan yang harus dilakukan, Node akan tertidur (sleep mode).
+![](../images/img/NodeJS-example.png)
+
+Dengan popularitas Node.js, asynchronous, pemrograman eventdriven telah menyebar luas di aplikasi sisi server. Meskipun secara konsep sederhana, pemrograman berbasis event bisa membosankan dan rawan kesalahan. Semantik kompleks dari event-loop Node.js, ditambah dengan berbagai rasa eksekusi asinkron dalam JavaScript, dengan mudah menyebabkan bug[11]. Pada sebuah Makalah yang berjudul "Reasoning about the Node.js event loop using async graphs" memperkenalkan model baru yang disebut Async Graph untuk alasan tentang perilaku runtime aplikasi dan interaksinya dengan loop peristiwa Node.js. Berdasarkan model, Penulis telah mengembangkan AsyncG, alat untuk secara otomatis membangun dan menganalisis Grafik Async dari aplikasi yang sedang berjalan, dan untuk mengidentifikasi bug yang terkait dengan semua sumber eksekusi asinkron di Node.js. AsyncG kompatibel dengan fitur bahasa ECMAScript terbaru dan dapat (de) diaktifkan saat runtime. Dalam evaluasi kami, kami menunjukkan bagaimana AsyncG dapat digunakan untuk mengidentifikasi bug di aplikasi Node.js di dunia nyata.
+
+Event-Driven dari Node.js dan event-loop secara konseptual sederhana: loop peristiwa mendengarkan kejadian dan memicu pengendali peristiwa misalnya pemanggilan kembali fungsi callback ketika suatu peristiwa terjadi. Perulangan event di Node.js sendiri dijalankan oleh satu threads, tetapi ia dapat mensurvei peristiwa dari threads lainnya misalkan threads asli untu I/O, dan dengan demikian membuat Node.js mampu menangani ribuan permintaan klien secara bersamaan (asynchronous)
+
+Ada beberapa modul atau library dasar node.js yang dapat mentranslasikan sebuah string menjadi sebuah perintah dasar console, dari library tersebut dapat lagi dikembangkan menjadi modul-modul kecil yang sangat berguna, misalkan untuk membuat perintah baru seperti memasukkan perintah console yang di ambil dari sebuah package binary dari sebuah program kecil. dari sini dapat dilakukan pemrograman secara modular dimana untuk pengembangan jangka panjang akan lebih nyaman dan mudah.
+
 #### bash script
 #### linux
 #### docker dan docker-compose
