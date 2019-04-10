@@ -56,7 +56,19 @@ Linux juga berjalan pada sistem tertanam, yaitu perangkat yang sistem operasinya
 Linux adalah salah satu contoh paling menonjol dari kolaborasi perangkat lunak bebas dan sumber terbuka. Kode sumber dapat digunakan, dimodifikasi, dan didistribusikan — secara komersial atau non-komersial — oleh siapa pun di bawah ketentuan lisensi masing-masing, seperti Lisensi Publik Umum GNU.
 
 #### 2.2.5 docker dan docker-compose
+Docker adalah program komputer yang melakukan virtualisasi tingkat sistem operasi. Ini pertama kali dirilis pada 2013 dan dikembangkan oleh Docker, Inc. Docker digunakan untuk menjalankan paket perangkat lunak yang disebut container. container diisolasi dari satu sama lain dan menggabungkan aplikasi mereka sendiri, alat, perpustakaan dan file konfigurasi; mereka dapat berkomunikasi satu sama lain melalui saluran yang jelas. Semua kontainer dijalankan oleh kernel sistem operasi tunggal dan karenanya lebih ringan dari mesin virtual. container dibuat dari gambar yang menentukan konten tepatnya. Gambar sering dibuat dengan menggabungkan dan memodifikasi gambar standar yang diunduh dari repositori publik.
+
+Docker dikembangkan terutama untuk Linux, di mana ia menggunakan fitur isolasi sumber daya dari kernel Linux seperti cgroups dan ruang nama kernel, dan sistem file yang dapat digunakan oleh serikat pekerja seperti OverlayFS dan lainnya untuk memungkinkan kontainer independen berjalan dalam satu contoh Linux, menghindari overhead memulai dan memelihara mesin virtual (VM). Dukungan kernel Linux untuk ruang nama sebagian besar, mengisolasi pandangan aplikasi dari lingkungan operasi, termasuk pohon proses, jaringan, ID pengguna dan sistem file yang dipasang, sementara cgroup kernel menyediakan pembatasan sumber daya untuk memori dan CPU. Sejak versi 0.9, Docker menyertakan libcontainer library sebagai caranya sendiri untuk secara langsung menggunakan fasilitas virtualisasi yang disediakan oleh kernel Linux, selain menggunakan antarmuka virtualisasi abstrak melalui libvirt, LXC dan systemd-nspawn.
+
+Membangun di atas fasilitas yang disediakan oleh kernel Linux (terutama cgroups dan namespaces), container Docker, tidak seperti mesin virtual, tidak memerlukan atau menyertakan sistem operasi yang terpisah. Sebagai gantinya, ia bergantung pada fungsionalitas kernel dan menggunakan isolasi sumber daya untuk CPU dan memori, dan memisahkan ruang nama untuk mengisolasi pandangan aplikasi dari sistem operasi. Docker mengakses fitur-fitur virtualisasi kernel Linux baik secara langsung menggunakan perpustakaan libcontainer, yang tersedia pada Docker 0.9, atau secara tidak langsung melalui libvirt, LXC (Linux Containers) atau systemd-nspawn.
+
+Sistem container membuat pengembangan menjadi lebih fleksibel, sistem yang terisolasi serta pemisahan setiap environment atau modul tidak mempengaruhi service-service lain yang telah berjalan, serta keamanan pada lokalisasi service dan scalling yang mudah. 
+
+Compose (docker-compose) merupakan alat untuk mendefinisikan dan menjalankan aplikasi yang kompleks dengan Docker. Dengan Compose, Anda mendefinisikan aplikasi multi-container dalam satu file, lalu memutarkan aplikasi Anda dalam satu perintah tunggal yang melakukan semua yang perlu dilakukan untuk menjalankannya. Dalam hal ini lebih praktis dalam menjalankan sebuah service karena dalam satu file dapat meringkas banyak service container.
+
 #### 2.2.6 ci/cd
+
+
 #### 2.2.7 circle ci
 #### 2.2.8 git
 #### 2.2.9 terminal
