@@ -46,7 +46,15 @@ BASH adalah file teks biasa yang berisi serangkaian perintah. Perintah-perintah 
 
 Dalam suatu kasus, perintah command line biasanya di eksekusi pada sebuah console atau terminal dari sebuah sistem operasi itu sendiri, dalam hal lain terdapat deretan atau runtutan perintah command line yang di satukan menjadi sebuah file yang bisa disebut sebagai wizard-script atau bash-script. Bash scripting biasanya digunakan sebagai file automasi dari sebuah perintah yang sering diulang untuk menghemat waktu pada penulisan command line.
 
-#### 2.2.4 linux
+#### 2.2.4 Sistem Operasi Linux
+Linux adalah keluarga sistem operasi perangkat lunak bebas dan sumber terbuka yang berbasis pada kernel Linux, kernel sistem operasi yang pertama kali dirilis pada 17 September 1991 oleh Linus Torvalds. Linux biasanya dikemas dalam distribusi Linux (atau singkatnya distro). Distribusi mencakup kernel Linux dan perangkat lunak serta perpustakaan sistem pendukung, banyak di antaranya disediakan oleh Proyek GNU. Banyak distribusi Linux menggunakan kata "Linux" dalam namanya, tetapi Free Software Foundation menggunakan nama GNU / Linux untuk menekankan pentingnya perangkat lunak GNU.
+
+Linux pada awalnya dikembangkan untuk komputer pribadi berdasarkan arsitektur Intel x86, tetapi sejak itu porting ke lebih banyak platform daripada sistem operasi lain. Linux adalah sistem operasi terkemuka di server dan sistem besi besar lainnya seperti komputer mainframe, dan satu-satunya OS yang digunakan pada superkomputer TOP 500 (sejak November 2017, setelah secara bertahap menghilangkan semua pesaing). Ini digunakan oleh sekitar 2,3 persen komputer desktop. Chromebook, yang menjalankan Chrome OS berbasis kernel Linux.
+
+Linux juga berjalan pada sistem tertanam, yaitu perangkat yang sistem operasinya biasanya dibangun di dalam firmware dan sangat disesuaikan dengan sistem. Ini termasuk router, kontrol otomatisasi, televisi, perekam video digital, konsol gim video, dan jam tangan pintar. Banyak ponsel pintar dan komputer tablet menjalankan Android dan turunan Linux lainnya. Karena dominasi Android pada smartphone, Linux memiliki basis instalasi terbesar dari semua sistem operasi serba guna.
+
+Linux adalah salah satu contoh paling menonjol dari kolaborasi perangkat lunak bebas dan sumber terbuka. Kode sumber dapat digunakan, dimodifikasi, dan didistribusikan — secara komersial atau non-komersial — oleh siapa pun di bawah ketentuan lisensi masing-masing, seperti Lisensi Publik Umum GNU.
+
 #### 2.2.5 docker dan docker-compose
 #### 2.2.6 ci/cd
 #### 2.2.7 circle ci
