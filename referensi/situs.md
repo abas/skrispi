@@ -1,1 +1,3 @@
 - [unix-shell](https://en.wikipedia.org/wiki/Unix_shell)
+- [linux-history](https://en.wikipedia.org/wiki/Linux#History)
+- [docker-compose](https://docs.docker.com/glossary/?term=Compose)
