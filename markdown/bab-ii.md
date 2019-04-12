@@ -20,7 +20,12 @@ Penelitian berikutnya dengan judul “Continuous Deployment of Software Intensiv
 
 Berikut merupakan landasan teori yang digunakan di penilitian ini, sumber dari landasan teori berikut berupa literatur jurnal, buku, dan juga official website.
 
-#### 2.2.1 SSH
+#### 2.2.1 Continuous Integration And Delivery (ci/cd)
+Continuous Integration merupakan sebuah teknik pada pengembangan software dimana pengembang dengan melakukan pembaruan atau perubahan pada sebuah repository jika suatu waktu terdapat perubahan pada kode sumber source code baru, serta mengotomatisasikan build & test dengan hasil berupa sebuah produk jadi. Apabila terjadi sebuah kesalahan, error, atau bug pada sebuah microservice atau aplikasi software dalam build/test maka tim pengembang dapat dengan segera melakukan bug fixing sehingga produk dapat di tingkatkan, dan juga dapat mengurangi waktu untuk melakukan validasi sebuah update.
+
+Continuous Delivery adalah sebuah teknik pada pengembangan software atau aplikasi ketika pengembang melakukan sebuah perubahan atau update source-code, build & testing yang kemudian akan otomatis sistem akan melakukan deploying sumber yang terlah di perbarui ke sebuah environment produksi, akan tetapi jika suatu ketika sebauh kode sumber terdapat sebuah error atau bug, maka dengan otomatis sistem akan melakukan roll-back pada perubahan sebelumnya karena Continuous Delivery berkaitan dengan proses bisnis. Apabila Continuous Delivery dapat berjalan dengan tanpa kendala tim pengembang bisa melanjutkan 
+
+#### 2.2.2 SSH
 Protokol Secure Shell (SSH) adalah protokol untuk login jarak jauh yang aman dan layanan jaringan aman lainnya melalui jaringan yang tidak aman. Protokol SSH terdiri dari tiga komponen utama: Transport Layer Protocol menyediakan otentikasi server, kerahasiaan, dan integritas dengan kerahasiaan ke depan yang sempurna. Protokol Otentikasi Pengguna mengautentikasi klien ke server. Protokol Koneksi melipatgandakan terowongan terenkripsi menjadi beberapa saluran logis. Detail protokol ini dijelaskan dalam dokumen terpisah[10].
 
 Metode Secure Shell (SSH) digunakan untuk melakukan remote-login atau masuk pada suatu sistem dari jarak jauh pada jaringan yang tidak aman. Secure Shell (SSH) sendiri terbagi menjadi 3 komponen :
@@ -31,7 +36,7 @@ mengotentikasi pengguna sisi klien ke server. Ini berjalan di atas protokol laye
 - The Connection Protocol [SSH-CONNECT] 
 melipatgandakan terowongan terenkripsi menjadi beberapa saluran logis. Itu berjalan di atas protokol otentikasi pengguna.
 
-#### 2.2.2 NodeJS
+#### 2.2.3 NodeJS
 NodeJS merupakan sebuah runtime JavaScript yang didorong peristiwa asinkron, Node dirancang untuk membangun aplikasi jaringan yang dapat diskalakan. Dalam contoh "hello world" berikut, banyak koneksi dapat ditangani secara bersamaan. Pada setiap koneksi callback diaktifkan, tetapi jika tidak ada pekerjaan yang harus dilakukan, Node akan tertidur (sleep mode).
 ![](../images/img/NodeJS-example.png)
 
@@ -41,12 +46,12 @@ Event-Driven dari Node.js dan event-loop secara konseptual sederhana: loop peris
 
 Ada beberapa modul atau library dasar node.js yang dapat mentranslasikan sebuah string menjadi sebuah perintah dasar console, dari library tersebut dapat lagi dikembangkan menjadi modul-modul kecil yang sangat berguna, misalkan untuk membuat perintah baru seperti memasukkan perintah console yang di ambil dari sebuah package binary dari sebuah program kecil. dari sini dapat dilakukan pemrograman secara modular dimana untuk pengembangan jangka panjang akan lebih nyaman dan mudah.
 
-#### 2.2.3 BASH
+#### 2.2.4 BASH
 BASH adalah file teks biasa yang berisi serangkaian perintah. Perintah-perintah ini adalah campuran dari perintah yang biasanya kita ketik ouselves pada baris perintah (seperti ls atau cp misalnya) dan perintah yang bisa kita ketik pada baris perintah tetapi umumnya tidak (Anda akan menemukan ini pada beberapa halaman berikutnya ). BASH berjalan pada Unix shell, interpreter baris perintah atau shell yang menyediakan antarmuka pengguna baris perintah untuk sistem operasi mirip Unix. Shell adalah bahasa perintah interaktif dan bahasa scripting, dan digunakan oleh sistem operasi untuk mengontrol eksekusi sistem menggunakan skrip shell. Pengguna biasanya berinteraksi dengan shell Unix menggunakan emulator terminal; Namun, operasi langsung melalui koneksi perangkat keras serial atau Secure Shell adalah umum untuk sistem server. Semua shell Unix menyediakan wildcarding nama file, perpipaan, di sini dokumen substitusi perintah, variabel, dan struktur kontrol untuk pengujian kondisi dan iterasi.
 
 Dalam suatu kasus, perintah command line biasanya di eksekusi pada sebuah console atau terminal dari sebuah sistem operasi itu sendiri, dalam hal lain terdapat deretan atau runtutan perintah command line yang di satukan menjadi sebuah file yang bisa disebut sebagai wizard-script atau bash-script. Bash scripting biasanya digunakan sebagai file automasi dari sebuah perintah yang sering diulang untuk menghemat waktu pada penulisan command line.
 
-#### 2.2.4 Sistem Operasi Linux
+#### 2.2.5 Sistem Operasi Linux
 Linux adalah keluarga sistem operasi perangkat lunak bebas dan sumber terbuka yang berbasis pada kernel Linux, kernel sistem operasi yang pertama kali dirilis pada 17 September 1991 oleh Linus Torvalds. Linux biasanya dikemas dalam distribusi Linux (atau singkatnya distro). Distribusi mencakup kernel Linux dan perangkat lunak serta perpustakaan sistem pendukung, banyak di antaranya disediakan oleh Proyek GNU. Banyak distribusi Linux menggunakan kata "Linux" dalam namanya, tetapi Free Software Foundation menggunakan nama GNU / Linux untuk menekankan pentingnya perangkat lunak GNU.
 
 Linux pada awalnya dikembangkan untuk komputer pribadi berdasarkan arsitektur Intel x86, tetapi sejak itu porting ke lebih banyak platform daripada sistem operasi lain. Linux adalah sistem operasi terkemuka di server dan sistem besi besar lainnya seperti komputer mainframe, dan satu-satunya OS yang digunakan pada superkomputer TOP 500 (sejak November 2017, setelah secara bertahap menghilangkan semua pesaing). Ini digunakan oleh sekitar 2,3 persen komputer desktop. Chromebook, yang menjalankan Chrome OS berbasis kernel Linux.
@@ -55,7 +60,7 @@ Linux juga berjalan pada sistem tertanam, yaitu perangkat yang sistem operasinya
 
 Linux adalah salah satu contoh paling menonjol dari kolaborasi perangkat lunak bebas dan sumber terbuka. Kode sumber dapat digunakan, dimodifikasi, dan didistribusikan — secara komersial atau non-komersial — oleh siapa pun di bawah ketentuan lisensi masing-masing, seperti Lisensi Publik Umum GNU.
 
-#### 2.2.5 docker dan docker-compose
+#### 2.2.6 docker dan docker-compose
 Docker adalah program komputer yang melakukan virtualisasi tingkat sistem operasi. Ini pertama kali dirilis pada 2013 dan dikembangkan oleh Docker, Inc. Docker digunakan untuk menjalankan paket perangkat lunak yang disebut container. container diisolasi dari satu sama lain dan menggabungkan aplikasi mereka sendiri, alat, perpustakaan dan file konfigurasi; mereka dapat berkomunikasi satu sama lain melalui saluran yang jelas. Semua kontainer dijalankan oleh kernel sistem operasi tunggal dan karenanya lebih ringan dari mesin virtual. container dibuat dari gambar yang menentukan konten tepatnya. Gambar sering dibuat dengan menggabungkan dan memodifikasi gambar standar yang diunduh dari repositori publik.
 
 Docker dikembangkan terutama untuk Linux, di mana ia menggunakan fitur isolasi sumber daya dari kernel Linux seperti cgroups dan ruang nama kernel, dan sistem file yang dapat digunakan oleh serikat pekerja seperti OverlayFS dan lainnya untuk memungkinkan kontainer independen berjalan dalam satu contoh Linux, menghindari overhead memulai dan memelihara mesin virtual (VM). Dukungan kernel Linux untuk ruang nama sebagian besar, mengisolasi pandangan aplikasi dari lingkungan operasi, termasuk pohon proses, jaringan, ID pengguna dan sistem file yang dipasang, sementara cgroup kernel menyediakan pembatasan sumber daya untuk memori dan CPU. Sejak versi 0.9, Docker menyertakan libcontainer library sebagai caranya sendiri untuk secara langsung menggunakan fasilitas virtualisasi yang disediakan oleh kernel Linux, selain menggunakan antarmuka virtualisasi abstrak melalui libvirt, LXC dan systemd-nspawn.
@@ -66,10 +71,6 @@ Sistem container membuat pengembangan menjadi lebih fleksibel, sistem yang teris
 
 Compose (docker-compose) merupakan alat untuk mendefinisikan dan menjalankan aplikasi yang kompleks dengan Docker. Dengan Compose, Anda mendefinisikan aplikasi multi-container dalam satu file, lalu memutarkan aplikasi Anda dalam satu perintah tunggal yang melakukan semua yang perlu dilakukan untuk menjalankannya. Dalam hal ini lebih praktis dalam menjalankan sebuah service karena dalam satu file dapat meringkas banyak service container.
 
-#### 2.2.6 ci/cd
-
-
-#### 2.2.7 circle ci
 #### 2.2.8 git
 #### 2.2.9 terminal
 #### 2.2.10 pm2
