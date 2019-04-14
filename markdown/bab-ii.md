@@ -72,10 +72,44 @@ Sistem container membuat pengembangan menjadi lebih fleksibel, sistem yang teris
 Compose (docker-compose) merupakan alat untuk mendefinisikan dan menjalankan aplikasi yang kompleks dengan Docker. Dengan Compose, Anda mendefinisikan aplikasi multi-container dalam satu file, lalu memutarkan aplikasi Anda dalam satu perintah tunggal yang melakukan semua yang perlu dilakukan untuk menjalankannya. Dalam hal ini lebih praktis dalam menjalankan sebuah service karena dalam satu file dapat meringkas banyak service container.
 
 #### 2.2.8 git
-#### 2.2.9 terminal
-#### 2.2.10 pm2
-#### 2.2.11 telegram
-#### 2.2.12 telegram bot api
+Git adalah sistem versioning-control yang terdistribusi dari sumber terbuka (opensource) dan gratis, git dirancang untuk melakukan penanganan segala sesuatu mulai dari proyek kecil hingga besar dengan cepat dan efisian. Ada beberapa contoh versioning-control lain selain git seperti CVS, SVN, Mercurial dan Fossil, akan tetapi Git lebih populer atau menduduki peringkat paling atas dari versioning-control yang lain. Git berfungsi sebagai pondasi untuk banyak layanan seperti Github, Gitlab, atau Bitbucket, yang telah menyediakan server repository cloud. Namun beberapa layanan Git dapat kita replikasi menjadi self-host service namun ada beberapa fitur yang pasti berbeda.
+
+Git melakukan proses snapshot pada suatu proyek yang kita kerjakan, dan menyimpannya dalam versi yang unik. Jika ada suatu perubahan yang itu berdampak pada suatu proyek maka kita dapat melakukan rollback ke perubahan yang sebelumnya, dan melakukan memperbaiki kesalahan yang telah di buat. Jika pengembang berkolaborasi, maka ketika pengembang lain mengirimi perubahan, pengembang utama dapat menggabungkan perubahan itu ke dalam cabang kerja, dan kemudian pengembang lain dapat mengambil versi proyek yang digabungkan dan terus bekerja dari versi yang baru. Git memungkinkan pengembang untuk mengelola banyak potensi varian karya tunggal, mempertahankan history semua perubahan, dan bahkan memungkinkan untuk versi paralel.
+
+#### 2.2.12 Telegram Bot
+
+Telegram Bot adalah akun telegram yang dioperasikan oleh perangkat lunak, Telegram Bot pada umumnya digunakan untuk wadah sebuah AI. Telegram Bot dapat diintegrasikan dengan layanan microservice atau bahkan meneruskan perintah menjadi Internet Of Things (IoT). Telegram Bot muncul pada 24 Juni 2015 dan sampai sekarang masih dalam proses pengembangan dari pihak telegram. Bot Telegram adalah aplikasi yang di-host di server yang menggunakan API bot Telegram untuk terhubung ke klien Telegram Messenger. Bot Telegram terhubung ke pengguna yang menggunakan pesan teks dan panggilan balik inline yang dienkapsulasi sebagai json. Pengguna dapat mengunggah foto / suara / video ke bot atau mengunduhnya dari bot ke komputer / ponsel mereka. Aplikasi bot yang berjalan di server bisa apa saja, dari aplikasi percakapan sederhana, mesin pencari yang kuat, perpustakaan multimedia yang besar, mesin pemecahan masalah hingga apa pun yang dapat Anda bayangkan. Keuntungan besar dari Telegram bot adalah bahwa mereka tidak memiliki persyaratan pemasangan dan berjalan tanpa terlihat pada semua platform komputer tempat Telegram Messenger dijalankan (Windows, Mac, Linux, Android, iOS, dan semua Browser Web). Dibawah ini adalah beberapa fitur dari Bot Telegram
+
+- Authorizing Bot
+
+Setiap bot diberikan token autentikasi unik ketika dibuat. Tokennya terlihat seperti 123456: ABC-DEF1234ghIkl-zyx57W2v1u123ew11, tetapi pihak telegram hanya akan menggunakan <token> dalam dokumen ini. Pengembang dapat mempelajari tentang mendapatkan token dan membuat token baru dalam situs https://core.telegram.org/bots/api
+
+- Pembuatan request
+
+Semua request ke API Bot Telegram harus menggunakan protocol HTTPS dan perlu disajikan dalam endpoint ini: https://api.telegram.org/bot<token>/METHOD_NAME. Seperti pada contoh di bawah ini:
+```c
+https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe
+```
+Respons berisi objek JSON, yang selalu memiliki bidang Boolean ‘ok’ dan dapat memiliki bidang String opsional ‘deskripsi’ dengan deskripsi hasil yang dapat dibaca manusia. Jika ‘ok’ sama dengan benar, permintaan berhasil dan hasil query dapat ditemukan di bidang ‘hasil’. Jika permintaan tidak berhasil, ‘ok’ sama dengan false dan kesalahannya dijelaskan dalam ‘uraian’. Bidang Integer ‘error_code’ juga dikembalikan, tetapi isinya dapat berubah di masa mendatang. Beberapa kesalahan mungkin juga memiliki bidang opsional ‘parameter’ dari tipe ResponseParameters, yang dapat membantu menangani kesalahan secara otomatis.
+
+Jika pengembang menggunakan webhook, pengembang dapat melakukan permintaan ke Bot API saat mengirim jawaban ke webhook. Gunakan tipe konten aplikasi / json atau application / x-www-form-urlencoded atau multipart / form-data untuk parameter yang lewat. Tentukan metode yang akan dipanggil dalam parameter metode permintaan. Tidak mungkin mengetahui bahwa permintaan seperti itu berhasil atau mendapatkan hasilnya.
+
+- Melakukan Update
+
+Ada dua cara yang saling eksklusif untuk menerima pembaruan untuk bot - metode getUpdates di satu sisi dan Webhooks di sisi lain. Pembaruan yang masuk disimpan di server sampai bot menerimanya dengan cara apa pun, tetapi pembaruan itu tidak akan disimpan lebih dari 24 jam. Terlepas dari opsi mana yang pengembang pilih, pengembang akan menerima objek Pembaruan berseri JSON sebagai hasilnya. Objek ini mewakili pembaruan yang masuk. Paling banyak salah satu parameter opsional dapat hadir dalam setiap pembaruan yang diberikan.
+
+| Field |	Tipe | Deskripsi |
+|-------|------|--------------|
+| update_id |	Integer |	Pengidentifikasi unik pembaruan. Pengidentifikasi pembaruan dimulai dari angka positif tertentu dan meningkat secara berurutan. ID ini menjadi sangat berguna jika Anda menggunakan Webhooks, karena memungkinkan pengembang untuk mengabaikan pembaruan berulang atau untuk mengembalikan urutan pembaruan yang benar, jika mereka keluar dari urutan. Jika tidak ada pembaruan baru selama setidaknya satu minggu, maka pengidentifikasi pembaruan berikutnya akan dipilih secara acak alih-alih secara berurutan. |
+| message |	Message |	Pilihan. Pesan masuk baru apa pun - teks, foto, stiker, dll. |
+| edited_message | Message | Pilihan. Versi baru dari pesan yang diketahui oleh bot dan telah diedit. |
+| channel_post |	Message | Pilihan. Versi baru dari pesan yang diketahui bot dan telah diedit. Opsional. Posting saluran masuk baru apa pun - teks, foto, stiker, dll. |
+| edited_channel_post |	Message | Pilihan. Versi baru dari posting saluran yang diketahui oleh bot dan telah diedit. |
+| inline_query	| InlineQuery | Pilihan. Permintaan inline masuk baru |
+| chosen_inline_result | ChosenInlineResult | Pilihan. Hasil kueri sebaris yang dipilih oleh pengguna dan dikirim ke mitra obrolan mereka. Silakan lihat dokumentasi kami tentang pengumpulan umpan balik untuk detail tentang cara mengaktifkan pembaruan ini untuk bot Anda. |
+| callback_query | CallbackQuery | Pilihan. Permintaan panggilan balik masuk baru. |
+| shipping_query | ShippingQuery | Pilihan. Permintaan pengiriman masuk baru. Hanya untuk faktur dengan harga fleksibel. |
+| pre_checkout_query | PreCheckoutQuery | Pilihan. Permintaan pra-checkout yang masuk baru. Berisi informasi lengkap tentang checkout.	|
 
 ### 2.3 Deskripsi Tempat KKI
 
