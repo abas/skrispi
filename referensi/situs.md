@@ -1,3 +1,7 @@
 - [unix-shell](https://en.wikipedia.org/wiki/Unix_shell)
 - [linux-history](https://en.wikipedia.org/wiki/Linux#History)
 - [docker-compose](https://docs.docker.com/glossary/?term=Compose)
+- [ci/cd](https://www.codepolitan.com/berkenalan-dengan-devops-5ab7bbe4947b4)
+- [git](https://git-scm.com/)
+- [git](https://opensource.com/resources/what-is-git)
+- [macam-macam metode pengembangan](https://fatharaannisaa.wordpress.com/2014/08/22/macam-macam-metode-pengembangan-perangkat-lunak/)
