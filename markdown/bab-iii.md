@@ -58,4 +58,21 @@ Perancangan Sistem merupakan tahapan awal yang harus dilakukan pada proses RAD k
 
 Berdasarkan data fitur-fitur tersebut akan dibuat suatu skenario pengujian dengan ketentuan bahwa setiap sub-fitur akan dibuatkan setidaknya dua kondisi pengujian yaitu kondisi pengujian positif dan negatif. Dua kondisi ini diperlukan agar dapat dipastikan bahwa fungsi yang dibuat dapan menangani ketika seluruh parameter yang diperlukan benar dan dapat mengantisipasi jika parameter yang dikirim ada yang salah.
 
-#### 3.4.3. Pengetesan 
+#### 3.4.2. Pembuatan Akun Telegram Bot
+Telegram Bot merupakan sebuah fitur yang ada pada Aplikasi Telegram yang dapat kita manfaatkan secara gratis, pembuatan Bot Telegram dapat diklakukan pada Aplikasi Telegram. Untuk membangun sistem untuk Bot yang terintegrasi dengan Telegram kita membutuhkan sebuah TELEGRAM BOT TOKEN, yang kita bisa dapatkan dengan membuat bot secara gratis pada Telegram BotFather (@@BotFather).
+
+Untuk mendapatkan TELEGRAM BOT TOKEN Langkah pertama yaitu membuat bot dengan perintah /newbot pada BotFather, kemudian BotFather akan menanyakan nama yang akan ditampilan pada Bot, sebagai sample peneliti mengisinya dengan nama TUKUTU CI/CD, jika sudah BotFather akan menanyakan lagi username untuk Bot tersebut, karena ini username maka apabila terjadi pengambilan username yang sudah di gunakan BotFather akan memberitahu jika username tersebut sudah di gunakan dan juga ketentuan username pada bot sekarang harus memiliki sebuah kata yang mengandung kata bot. Sebagai Contoh terdapat pada gambar dibawah
+![newbot](../images/botfather/makebot.png)
+
+Dari gambar diatas pengembang sudah membuat Telegram Bot dan mendapatkan sebuah TELEGRAM BOT TOKEN untuk mengakses Telegram Bot API. BotFather menyediakan fitur untuk manajemen Bot, pengembang bisa menggunakan perintah /mybots untuk mengetahui Bot apa saja yang sudah dibuat. 
+![mybots](../images/botfather/mybot.png)
+
+Untuk mengatur Bot yang telah dibuat, pengembang dapat menekan username Bot yang tersedia.
+![detailbot](../images/botfather/detailbot.png)
+
+#### 3.4.3. Pendefinisian Telegram Bot Token
+Untuk dapat menggunakan service Telegram Bot API diperlukan sebuah Telegram Bot Token, setiap Bot memiliki Token yang unik, token didefinsikan pada sebuah file .env atau file yang berisi nilai environment - environment yang bersifat dynamic atau berubah - ubah. 
+![environment](../images/botfather/environment.png )
+![definisitoken](../images/botfather/definisitoken.png)
+
+Untuk bahasa yang digunakan pada gambar diatas adalah NodeJS, 
