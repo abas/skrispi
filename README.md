@@ -10,4 +10,4 @@
 - [x] BAB II
 - [?] BAB III - `need revisi ?`
 - [?] BAB IV - `need revisi ?`
-- [x] BAB V
+- [x] BAB V - `need loli`
