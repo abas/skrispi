@@ -2,8 +2,7 @@
 ## KESIMPULAN DAN SARAN
 ### 5.1 Kesimpulan
 Berdasarkan pembahasan yang terdapat pada bab sebelumnya dapat diambil kesimpulan sebagai berikut:
-1. Project CI/CD menggunakan Telegram Bot dapat berjalan pada sistem operasi Linux, dengan memanfaatkan kombinasi antara
-Shell Script dan Bahasa pemrograman NodeJS.
+1. Dengan memanfaatkan kombinasi antara Shell Script dan bahasa pemrograman NodeJS, projek CI/CD menggunakan Telegram Bot sukses dan berhasil diterapkan pada sistem pengembangan aplikasi Tukutu.
 2. Shell Script yang digunakan hanya support untuk sistem operasi linux
 3. Project menggunakan bahasa pemrograman NodeJS dengan arsitektur Native Programming, sehingga kesesuaian sistem tergantung
 pada pengembang Project.
