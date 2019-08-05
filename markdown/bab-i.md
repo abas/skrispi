@@ -29,6 +29,7 @@ Dalam penelitian ini terdapat batasan masalah sehingga pembahasan yang dilakukan
 6. Perintah pada Bot akan dilanjutkan dengan eksekusi sebuah file.
 7. Dalam sebuah group, bot bisa mengeksekusi perintah dengan melakukan mention.
 8. Beberapa perintah dalam terminal tidak dapat dieksekusi Bot bahkan oleh super admin, untuk menjaga sistem tetap aman.
+9. Shell script hanya dijalankan System Operasi Linux/Unix
 
 ### 1.4 TUJUAN PENELITIAN
 Adapun tujuan yang dilakukan penelitian ini:
