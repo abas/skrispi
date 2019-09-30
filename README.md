@@ -11,3 +11,7 @@
 - [?] BAB III - `need revisi ?`
 - [?] BAB IV - `need revisi ?`
 - [x] BAB V - `need loli`
+- [ ] Abstract
+
+##### Note:
+- create all content on /markdown/content_name.md
